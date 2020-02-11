@@ -1,0 +1,17 @@
+<h1 class="main">ALL MATCHES</h1>
+
+<table class="main">
+    <tr>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>City</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let match of allmatches.response.venues">
+        <td>{{match.name}}</td>
+        <td>{{match.contact.phone}}</td>
+        <td>{{match.location.city}}</td>
+        <button type="submit" [disabled]="clicked"
+            (click)="addMatch(match.id,match.name,match.contact.phone,match.location.city)">Save</button>
+    </tr>
+</table>

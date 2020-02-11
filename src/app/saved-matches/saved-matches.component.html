@@ -1,0 +1,18 @@
+<h1 class="main">SAVED MATCHES</h1>
+
+<table class="main">
+    <tr>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>City</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let match of savedMatches">
+        <td>{{match.name}}</td>
+        <td>{{match.phone}}</td>
+        <td>{{match.city}}</td>
+        <td>
+            <button type="button" (click)=delete(match.id)>Delete</button>
+        </td>
+    </tr>
+</table>
